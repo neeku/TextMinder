@@ -2,11 +2,6 @@ from webob import Response, exc
 from cornice import Service
 
 
-from . import (
-    API_ROOT,
-    CORS_POLICY,
-)
-
 messages = Service(name='messages', '/messages', description="Messages")
 
 class _apiError(exc.HTTPError):
