@@ -27,7 +27,7 @@ def messages(request):
     print return_msg
     if return_msg:
         sms_msg = TwilioSMS(sms_from, return_msg)
-        # result = sms_msg.send_sms()
+        result = sms_msg.send_sms()
 
     return {'status': 'OK'}
 
