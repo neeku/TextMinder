@@ -13,7 +13,7 @@ requires = [
     'pyramid_chameleon',
     'pyramid_debugtoolbar',
     'waitress',
-    'twilio'
+    'twilio',
     ]
 
 setup(name='test',

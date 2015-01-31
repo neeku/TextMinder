@@ -1,7 +1,6 @@
 from twilio.rest import TwilioRestClient
-import sys
 
-# Your Account Sid and Auth Token from twilio.com/user/account
+
 class TwilioSMS(TwilioRestClient):
     def __init__(self, sms_to, msg):
         self.account_sid = "AC710ce54ec742f46e8758bba762c6986f"
@@ -23,7 +22,7 @@ if __name__ == '__main__':
     to = "+353872789354"    # Aidan
     # to = "+353857354527"    # Kevin
     # to = "+353872650540"    # Mark
-    to = "+353876818193"
+    # to = "+353876818193"
     twilio_msg = TwilioSMS(to, "Hi from textMinder @ #hackmakethebank")
     result = twilio_msg.send_sms()
     print result

@@ -1,5 +1,5 @@
 from webob import Response, exc
-from cornice.resource import resource, view
+from cornice import Service
 
 
 from . import (
