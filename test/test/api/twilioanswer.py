@@ -19,7 +19,10 @@ class _apiError(exc.HTTPError):
 
 
 @messages.get()
-@messages.post()
 def get_messages(request):
+    print request
+
+@messages.get()
+def post_messages(request):
     print request
 
