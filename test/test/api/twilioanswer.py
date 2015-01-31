@@ -1,6 +1,6 @@
 from webob import Response, exc
 from cornice import Service
-
+import json
 
 messages = Service(name='messages', '/messages', description="Messages")
 
@@ -15,7 +15,7 @@ class _apiError(exc.HTTPError):
 
 @messages.get()
 def get_messages(request):
-    print request
+    return {'incoming': json.dumps(request)}
 
 @messages.get()
 def post_messages(request):
