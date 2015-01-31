@@ -17,18 +17,18 @@ _COMMANDS = {'BALANCE': get_balance,
 def my_view(request):
     return {'project': 'test'}
 
-@view_config(route_name='messages', renderer='json')
+@view_config(route_name='messages', renderer='string')
 def messages(request):
     sms_body = request.params.get('Body')
     sms_from = request.params.get('From')
 
-    return_msg = _COMMANDS[sms_body]()
+    try:
+        return_msg = _COMMANDS[sms_body]()
+    except:
+        return_msg = "Thank you for your text message."
 
     print return_msg
-    if return_msg:
-        sms_msg = TwilioSMS(sms_from, return_msg)
-        result = sms_msg.send_sms()
 
-    return {'status': 'OK'}
+    return return_msg
 
 
