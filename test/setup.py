@@ -14,6 +14,7 @@ requires = [
     'pyramid_debugtoolbar',
     'waitress',
     'twilio',
+    'cornice',
     ]
 
 setup(name='test',
