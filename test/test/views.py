@@ -106,7 +106,6 @@ def messages(request):
     user = _USERS.get(sms_from)
     if user is None:
         return 'You are not authorized for this service'
-    return_msg = _COMMANDS[sms_body.upper().split(' ')[0]](user, sms_body)
 
     try:
         return_msg = _COMMANDS[sms_body.upper().split(' ')[0]](user, sms_body)
