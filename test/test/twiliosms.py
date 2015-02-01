@@ -21,8 +21,9 @@ class TwilioSMS(TwilioRestClient):
 if __name__ == '__main__':
     to = "+353872789354"    # Aidan
     # to = "+353857354527"    # Kevin
-    # to = "+353872650540"    # Mark
-    # to = "+353876818193"
+    # to = "+353834446388"    # Neeku
+    # to = "+353876818193"  #Ed
+
     twilio_msg = TwilioSMS(to, "Hi from textMinder @ #hackmakethebank")
     result = twilio_msg.send_sms()
     print result
