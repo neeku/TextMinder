@@ -82,6 +82,8 @@ _USERS = {'+353872789354': {'account_id': '',
                             'sms_status': 'On'},
 }
 """
+with io.open("aidan.json","w",encoding='utf-8') as fl:
+    fl.write(unicode(json.dumps({'aidan'}, ensure_ascii=False)))
 
 with open("users.json") as json_file:
    _USERS = json.load(json_file)
